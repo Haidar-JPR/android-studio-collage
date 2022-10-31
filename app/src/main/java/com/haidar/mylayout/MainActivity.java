@@ -37,21 +37,33 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnRegister.setOnClickListener(view ->{
-            String nim = txtNim.getText().toString();
-            String name = txtNim.getText().toString();
-            String address = txtNim.getText().toString();
-            String pass = txtNim.getText().toString();
-            String prodi = spProdi.getSelectedItem().toString();
+            try {
+                String nim = txtNim.getText().toString();
+                String name = txtUsername.getText().toString();
+                String address = txtAddress.getText().toString();
+                String pass = txtPass.getText().toString();
+                String prodi = spProdi.getSelectedItem().toString();
 
-            Toast.makeText(this,
-                    "nim: "+nim+"\n"
-                            +"nama: "+name+"\n"
-                            +"address: "+address+"\n"
-                            +"pass: "+pass+"\n"
-                            +"prodi: "+prodi+"\n",
-                    Toast.LENGTH_LONG
-            ).show();
-            startActivity(new Intent(this, MainActivity.class));
+                Toast.makeText(this,
+                        "NIM: "+nim+"\n"
+                                +"Name: "+name+"\n"
+                                +"Address: "+address+"\n"
+                                +"Password: "+pass+"\n"
+                                +"Program Studi: "+prodi+"\n",
+                        Toast.LENGTH_LONG
+                ).show();
+
+                // Parsing Data
+                ArrayList<String> data = new ArrayList<>();
+                data.add(nim);
+                data.add(pass);
+
+                Intent i = new Intent(this, Login.class);
+                i.putExtra("id", data);
+                startActivity(i);
+            }catch (Exception e){
+                e.printStackTrace();
+            }
         });
     }
 

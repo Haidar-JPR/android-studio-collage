@@ -5,20 +5,54 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class Login extends AppCompatActivity {
 
-    Button btnRegister;
+    String name, pass;
+    EditText txtNim, txtPass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        btnRegister = findViewById(R.id.btnRegister);
+        Button btnRegister = findViewById(R.id.btnRegister);
+        Button btnLogin = findViewById(R.id.btnLogin);
+        txtNim = findViewById(R.id.txtNim);
+        txtPass = findViewById(R.id.txtPass);
 
         btnRegister.setOnClickListener(view ->{
             startActivity(new Intent(this, MainActivity.class));
+        });
+
+        btnLogin.setOnClickListener(view -> {
+            String nim = txtNim.getText().toString();
+            String pass = txtPass.getText().toString();
+
+            ArrayList<String> data = (ArrayList<String>) getIntent().getSerializableExtra("id");
+
+            String nimExtra = data.get(0);
+            String passExtra = data.get(1);
+            System.out.println(nimExtra);
+            System.out.println(passExtra);
+
+            if(nim.isEmpty() || pass.isEmpty()){
+                Toast.makeText(this, "Nama atau password tidak boleh kosong",
+                        Toast.LENGTH_LONG
+                ).show();
+            }else if(nim.equals(nimExtra) && pass.equals(passExtra)){
+                Intent i = new Intent(this, MainPage.class);
+                i.putExtra("nim", nim);
+                startActivity(i);
+            }else{
+                Toast.makeText(this, "Nama atau password salah",
+                        Toast.LENGTH_SHORT
+                ).show();
+            }
         });
     }
 }
