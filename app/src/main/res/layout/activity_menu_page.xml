@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuPage">
+
+    <ImageView
+        android:id="@+id/imgProfile"
+        android:src="@drawable/ic_person"
+        android:layout_margin="20dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <TextView
+        android:id="@+id/txtLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/imgProfile"
+        android:layout_margin="25dp"
+        android:text="@string/myName"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/dev"
+        android:layout_below="@+id/imgProfile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/black"
+        android:layout_width="350dp"
+        android:layout_height="3dp" />
+
+    <LinearLayout
+        android:id="@+id/lv1"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/dev"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/imgRV"
+            android:drawableTop="@drawable/ic_shop"
+            android:background="@color/purple_500"
+            android:text="Rec Views"
+            android:textSize="10sp"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <Button
+            android:id="@+id/imgCamera"
+            android:drawableTop="@drawable/ic_camera"
+            android:background="@color/purple_500"
+            android:layout_marginStart="30dp"
+            android:text="Camera"
+            android:textSize="10sp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_below="@+id/lv1"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/imgWebView"
+            android:drawableTop="@drawable/ic_web"
+            android:background="@color/purple_500"
+            android:layout_marginTop="30dp"
+            android:text="Web View"
+            android:textSize="10sp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+        <Button
+            android:id="@+id/imgMaps"
+            android:drawableTop="@drawable/ic_maps"
+            android:background="@color/purple_500"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:text="Maps"
+            android:textSize="10sp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -4,7 +4,11 @@
     <string name="hintNim">Nomor Induk</string>
     <string name="username">Nama</string>
     <string name="address">Address</string>
-    <string name="login">Login</string>
     <string name="pass">Password</string>
+    <string name="login">Login</string>
+    <string name="button1">Camera</string>
+    <string name="button2">Gallery</string>
+    <string name="myName">Subhan Ikraam Haidar</string>
 
+    <string name="nama">Nama</string>
 </resources>

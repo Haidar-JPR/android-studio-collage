@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecycleViews">
+    tools:context=".WebViews">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvItem"
+    <WebView
+        android:id="@+id/webV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

@@ -44,19 +44,20 @@ public class MainActivity extends AppCompatActivity {
                 String pass = txtPass.getText().toString();
                 String prodi = spProdi.getSelectedItem().toString();
 
-                Toast.makeText(this,
-                        "NIM: "+nim+"\n"
-                                +"Name: "+name+"\n"
-                                +"Address: "+address+"\n"
-                                +"Password: "+pass+"\n"
-                                +"Program Studi: "+prodi+"\n",
-                        Toast.LENGTH_LONG
-                ).show();
+//                Toast.makeText(this,
+//                        "NIM: "+nim+"\n"
+//                                +"Name: "+name+"\n"
+//                                +"Address: "+address+"\n"
+//                                +"Password: "+pass+"\n"
+//                                +"Program Studi: "+prodi+"\n",
+//                        Toast.LENGTH_LONG
+//                ).show();
 
                 // Parsing Data
                 ArrayList<String> data = new ArrayList<>();
                 data.add(nim);
                 data.add(pass);
+                data.add(name);
 
                 Intent i = new Intent(this, Login.class);
                 i.putExtra("id", data);

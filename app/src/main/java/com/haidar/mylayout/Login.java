@@ -30,29 +30,33 @@ public class Login extends AppCompatActivity {
         });
 
         btnLogin.setOnClickListener(view -> {
-            String nim = txtNim.getText().toString();
-            String pass = txtPass.getText().toString();
+//            String nim = txtNim.getText().toString();
+//            String pass = txtPass.getText().toString();
+//
+//            ArrayList<String> data = (ArrayList<String>) getIntent().getSerializableExtra("id");
+//
+//            String nimExtra = data.get(0);
+//            String passExtra = data.get(1);
+//            String nameExtra = data.get(2);
 
-            ArrayList<String> data = (ArrayList<String>) getIntent().getSerializableExtra("id");
+//            if(nim.isEmpty() || pass.isEmpty()){
+//                Toast.makeText(this, "Nama atau password tidak boleh kosong",
+//                        Toast.LENGTH_LONG
+//                ).show();
+//            }else if(nim.equals(nimExtra) && pass.equals(passExtra)){
+//                Toast.makeText(this, "Selamat Datang "+nameExtra,
+//                        Toast.LENGTH_SHORT
+//                ).show();
 
-            String nimExtra = data.get(0);
-            String passExtra = data.get(1);
-            System.out.println(nimExtra);
-            System.out.println(passExtra);
-
-            if(nim.isEmpty() || pass.isEmpty()){
-                Toast.makeText(this, "Nama atau password tidak boleh kosong",
-                        Toast.LENGTH_LONG
-                ).show();
-            }else if(nim.equals(nimExtra) && pass.equals(passExtra)){
-                Intent i = new Intent(this, MainPage.class);
-                i.putExtra("nim", nim);
+                Intent i = new Intent(this, MenuPage.class);
+//                i.putExtra("nim", nim);
                 startActivity(i);
-            }else{
-                Toast.makeText(this, "Nama atau password salah",
-                        Toast.LENGTH_SHORT
-                ).show();
-            }
+//
+//            }else{
+//                Toast.makeText(this, "Nama atau password salah",
+//                        Toast.LENGTH_SHORT
+//                ).show();
+//            }
         });
     }
 }
