@@ -33,7 +33,7 @@ public class MenuPage extends AppCompatActivity {
         });
 
         btn4.setOnClickListener(view -> {
-            startActivity(new Intent(this, MapPage.class));
+            startActivity(new Intent(this, Mapss.class));
         });
     }
 }
